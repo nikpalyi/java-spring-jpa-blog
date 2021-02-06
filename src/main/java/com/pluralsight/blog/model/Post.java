@@ -19,6 +19,17 @@ public class Post {
     @Temporal(TemporalType.DATE)
     private Date date;
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    @ManyToOne
+    private Category category;
+
     public Post() {
         super();
     }
